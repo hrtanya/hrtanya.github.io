@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>古天悦 Tanya · 个人网站</title>
+<meta name="description" content="古天悦（Tanya）的个人网站：内容运营、视觉设计与游戏经历，南京大学出版专业硕士。Bienvenue dans mon monde。" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body class="paper-noise">
+
+<!-- ============ 翻页书 ============ -->
+<div class="stage">
+  <div class="book" id="book">
+
+    <!-- P0 · 封面 -->
+    <section class="leaf leaf-cover active" data-page="0">
+      <div class="leaf-pad">
+        <div class="cover-box">
+          <h1 class="fr">Bienvenue dans mon monde</h1>
+          <div class="welcome-cn">欢迎来到我的空间</div>
+          <div class="en-name"><b>Tanya</b> Gu · 古天悦</div>
+          <div class="role">PERSONAL WEBSITE · 个人网站</div>
+          <p class="click-hint">✦ 点击下方文字，去你想去的地方 · Click any label to explore ✦</p>
+          <nav class="cover-links">
+            <a onclick="goPage(1)">目录<span class="en">Contents</span></a>
+            <a onclick="goPage(2)">关于我<span class="en">About</span></a>
+            <a onclick="goPage(3)">作品<span class="en">Works</span></a>
+            <a onclick="goPage(4)">经历<span class="en">Journey</span></a>
+            <a onclick="goPage(5)">游戏<span class="en">Gaming</span></a>
+            <a href="resume.html">简历<span class="en">Résumé</span></a>
+            <a onclick="goPage(6)">联系<span class="en">Say Hi</span></a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- P1 · 目录 -->
+    <section class="leaf" data-page="1">
+      <img class="corner-wash bl" src="assets/ripple-bloom.png" alt="" />
+      <div class="leaf-pad">
+        <div class="toc-wrap">
+          <div class="toc-left">
+            <div class="frame"><img src="assets/photo.jpg" alt="古天悦 Tanya" /></div>
+            <div class="hello-en">Hi, I'm Tanya.</div>
+            <h2>你好，我是古天悦</h2>
+            <p>南大出版专业硕士在读，写得了文案、排得了版面、办得了活动——欢迎随便逛逛。</p>
+          </div>
+          <ol class="toc-list">
+            <li><a onclick="goPage(2)"><span class="no">壹</span>关于我<span class="en">About Me</span><span class="dots"></span><span class="pg">P.02</span></a></li>
+            <li><a onclick="goPage(3)"><span class="no">贰</span>精选作品<span class="en">Selected Works</span><span class="dots"></span><span class="pg">P.03</span></a></li>
+            <li><a onclick="goPage(4)"><span class="no">叁</span>我的经历<span class="en">My Journey</span><span class="dots"></span><span class="pg">P.04</span></a></li>
+            <li><a onclick="goPage(5)"><span class="no">肆</span>游戏经历<span class="en">Gaming</span><span class="dots"></span><span class="pg">P.05</span></a></li>
+            <li><a onclick="goPage(6)"><span class="no">伍</span>写在最后<span class="en">Say Hi</span><span class="dots"></span><span class="pg">P.06</span></a></li>
+            <li><a href="resume.html"><span class="no">附</span>简历<span class="en">Résumé (PDF style)</span><span class="dots"></span><span class="pg">A4</span></a></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- P2 · 关于我 -->
+    <section class="leaf" data-page="2">
+      <img class="corner-wash tr" src="assets/wash-splash.png" alt="" />
+      <div class="leaf-pad">
+        <div class="page-head">
+          <span class="no">壹</span>
+          <h2>关于我</h2>
+          <span class="en">About Me</span>
+        </div>
+        <div class="about-wrap">
+          <div class="about-left">
+            <div class="frame"><img src="assets/photo.jpg" alt="古天悦 Tanya" /></div>
+            <div class="fact">古天悦 · Tanya</div>
+            <div class="fact-en">Nanjing University · M.A. in Publishing</div>
+            <p class="intro">
+              本科法语，硕士出版——一半是文字的严谨，一半是画面的敏感。运营让我把事情做成，美术让我把事情做好看。
+            </p>
+            <p class="motto-note">把文字排成诗，把日子过成画</p>
+          </div>
+          <div class="about-right">
+            <div class="track">
+              <h3>运营 · 让事情发生<span class="en">Operations</span></h3>
+              <p>内容运营 + 活动策划 + 用户研究，擅长从 0 到 1。</p>
+              <ul>
+                <li>小红书账号 0 → 1 建立与内容打造（合肥有始网络）</li>
+                <li>公众号日常运营与营销文案（佛山槑槑文化）</li>
+                <li>泛非电影节社交媒体内容运营（联合国志愿者）</li>
+                <li>玩家访谈与用户反馈甄别（网易游戏）</li>
+              </ul>
+            </div>
+            <div class="track art">
+              <h3>美术 · 让事情好看<span class="en">Art &amp; Design</span></h3>
+              <p>出版专业的版式功底，落在排版、文创与实体书上。</p>
+              <ul>
+                <li>商品推文版图设计与营销物料（Photoshop）</li>
+                <li>实体书《文匠观察笔记》全流程与装帧设计</li>
+                <li>文创设计与制作（选题、设计、打样）</li>
+                <li>播客《编辑创造》录制与剪辑（剪映）</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- P3 · 精选作品 -->
+    <section class="leaf leaf-works" data-page="3">
+      <img class="corner-wash bl" src="assets/wash-splash.png" alt="" />
+      <div class="leaf-pad">
+        <div class="page-head">
+          <span class="no">贰</span>
+          <h2>精选作品</h2>
+          <span class="en">Selected Works</span>
+          <span class="head-note">更多装裱中 · More coming</span>
+        </div>
+        <div class="works-collage">
+          <div class="work-item">
+            <div class="work-thumb t1">小红书 · 待替换封面</div>
+            <div class="work-body">
+              <div class="kind">内容运营<span class="en">Content Ops</span></div>
+              <h3>小红书账号 0 → 1</h3>
+              <p>账户建立与内容打造全流程，完成冷启动与内容体系搭建。（合肥有始网络）</p>
+            </div>
+          </div>
+          <div class="work-item">
+            <div class="work-thumb t2">实体书 · 待替换封面</div>
+            <div class="work-body">
+              <div class="kind">出版 × 美术<span class="en">Publishing</span></div>
+              <h3>实体书《文匠观察笔记》</h3>
+              <p>选题、组稿、审稿、印刷全流程，负责文创设计与制作。</p>
+            </div>
+          </div>
+          <div class="work-item">
+            <div class="work-thumb t3">大创项目 · 待替换封面</div>
+            <div class="work-body">
+              <div class="kind">科研 × 运营<span class="en">Research</span></div>
+              <h3>国家级大创「偕她书」</h3>
+              <p>核心成员，国家级立项；论文一篇、公众号文章 7 篇、180+ 页访谈录。</p>
+            </div>
+          </div>
+          <div class="work-item">
+            <div class="work-thumb t4">电影节 · 待替换封面</div>
+            <div class="work-body">
+              <div class="kind">运营 · 志愿者<span class="en">UN Volunteer</span></div>
+              <h3>泛非电影节线上营销</h3>
+              <p>以联合国志愿者身份参与线上宣传，负责社交媒体内容运营。</p>
+            </div>
+          </div>
+          <div class="work-item">
+            <div class="work-thumb t5">推文设计 · 待替换封面</div>
+            <div class="work-body">
+              <div class="kind">美术 × 文案<span class="en">Visual &amp; Copy</span></div>
+              <h3>商品推文版图设计</h3>
+              <p>公众号推文版面设计、营销文案写作与商品介绍翻译。（佛山槑槑文化）</p>
+            </div>
+          </div>
+          <div class="work-item">
+            <div class="work-thumb t6">编舟计 · 待替换封面</div>
+            <div class="work-body">
+              <div class="kind">编辑 × 内容<span class="en">Editing</span></div>
+              <h3>编舟计 · 播客《编辑创造》</h3>
+              <p>责任编辑：文稿撰写、整理与审阅；播客录制与剪辑。</p>
+            </div>
+          </div>
+        </div>
+        <div class="works-note">更多作品持续装裱中，下一步会把真实项目照片贴进相框。<span class="en">More works are being framed; real project photos coming soon.</span></div>
+      </div>
+    </section>
+
+    <!-- P4 · 我的经历 -->
+    <section class="leaf" data-page="4">
+      <img class="corner-wash tr" src="assets/ripple-bloom.png" alt="" />
+      <div class="leaf-pad">
+        <div class="page-head">
+          <span class="no">叁</span>
+          <h2>我的经历</h2>
+          <span class="en">My Journey</span>
+        </div>
+        <div class="journey-list">
+          <div class="era">
+            <div class="year-col"><span class="year">2021</span><span class="period">2021.09–2025.06</span></div>
+            <div class="era-body">
+              <h3>法语本科<span class="en">B.A. in French</span></h3><span class="org">南京大学外国语学院</span>
+              <p>高级法语、法国文学与翻译；获 2024–2025 年度文诚奖学金。</p>
+            </div>
+          </div>
+          <div class="era">
+            <div class="year-col"><span class="year">2022</span><span class="period">2022.07–2022.08</span></div>
+            <div class="era-body">
+              <h3>文案 · 活动策划 · 营销实习生<span class="en">Intern</span></h3><span class="org">佛山市槑槑文化传播有限公司</span>
+              <p>公众号运营、推文版图设计与营销文案；与区文化局合作策划并落地线上游学路线。</p>
+            </div>
+          </div>
+          <div class="era">
+            <div class="year-col"><span class="year">2024</span><span class="period">2024.06–2024.07</span></div>
+            <div class="era-body">
+              <h3>小红书运营实习生<span class="en">Xiaohongshu Ops Intern</span></h3><span class="org">合肥有始网络科技有限公司</span>
+              <p>负责小红书账户从 0 到 1 的建立与内容打造。</p>
+            </div>
+          </div>
+          <div class="era">
+            <div class="year-col"><span class="year">2025</span><span class="period">2025.02–2025.03</span></div>
+            <div class="era-body">
+              <h3>泛非电影节线上宣传志愿者<span class="en">UN Volunteer</span></h3><span class="org">联合国志愿者</span>
+              <p>参与线上宣传活动，负责社交媒体平台内容运营。</p>
+            </div>
+          </div>
+          <div class="era">
+            <div class="year-col"><span class="year">2025</span><span class="period">2025.09–Now</span></div>
+            <div class="era-body">
+              <h3>出版硕士在读 × 编舟计责任编辑<span class="en">M.A. Candidate</span></h3><span class="org">南京大学信息管理学院</span>
+              <p>主修出版物编辑与制作、期刊出版与策划；「编舟计」责任编辑，播客录制剪辑。</p>
+            </div>
+          </div>
+          <div class="era">
+            <div class="year-col"><span class="year">2026</span><span class="period">2026.05–2026.06</span></div>
+            <div class="era-body">
+              <h3>网易游戏玩家访谈兼职<span class="en">Player Interview</span></h3><span class="org">网易游戏</span>
+              <p>负责玩家电访，收集与甄别玩家意见反馈，沉淀真实用户视角。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- P5 · 游戏经历 -->
+    <section class="leaf leaf-gaming" data-page="5">
+      <img class="corner-wash bl" src="assets/ripple-bloom.png" alt="" />
+      <div class="leaf-pad">
+        <div class="page-head">
+          <span class="no">肆</span>
+          <h2>游戏经历</h2>
+          <span class="en">Gaming Experience</span>
+        </div>
+        <p class="gaming-intro">玩游戏，也研究游戏——长期的玩家视角，让我在玩家访谈与社群沟通时，能真正听懂玩家在说什么。</p>
+        <div class="gaming-grid">
+          <div class="game-list">
+            <div class="game-row"><span class="g-name">王者荣耀</span><span class="g-en">Honor of Kings</span><span class="g-dot"></span><span class="g-note">2015 至今 · 十年老玩家 · 最高段位钻石</span></div>
+            <div class="game-row"><span class="g-name">金铲铲之战</span><span class="g-en">Teamfight Tactics</span><span class="g-dot"></span><span class="g-note">3 年 · 最高段位钻石</span></div>
+            <div class="game-row"><span class="g-name">逆水寒</span><span class="g-en">Justice</span><span class="g-dot"></span><span class="g-note">手游 + 端游 · 手游闲趣全国前 50</span></div>
+            <div class="game-row"><span class="g-name">天涯明月刀</span><span class="g-en">Moonlight Blade</span><span class="g-dot"></span><span class="g-note">端游 + 手游 · 长期游玩</span></div>
+            <div class="game-row"><span class="g-name">梦幻花园</span><span class="g-en">Gardenscapes</span><span class="g-dot"></span><span class="g-note">关卡全通关</span></div>
+            <div class="game-row"><span class="g-name">一梦江湖</span><span class="g-en">Dream of Jianghu</span><span class="g-dot"></span><span class="g-note">长期游玩</span></div>
+            <div class="game-row"><span class="g-name">燕云十六声</span><span class="g-en">Where Winds Meet</span><span class="g-dot"></span><span class="g-note">开服玩家 · 摄影 / 剧情 / 探索党</span></div>
+            <div class="game-row"><span class="g-name">无畏契约手游</span><span class="g-en">Valorant Mobile</span><span class="g-dot"></span><span class="g-note">最近在玩 · Recently playing</span></div>
+          </div>
+          <div class="gaming-side">
+            <div class="track">
+              <h3>燕云十六声 · 百业社主<span class="en">Guild Leader</span></h3>
+              <p>从开服玩起，摄影党 / 剧情党 / 探索党；作为百业（玩家社团）社主，组织社员参与多人玩法，平时也关注游戏社群里的玩家意见与动态。</p>
+            </div>
+            <div class="track art">
+              <h3>AI × 游戏创作<span class="en">Game Making</span></h3>
+              <p>最近在尝试用 AI 工具自己创作网页解谜游戏，从玩家变成创作者。</p>
+            </div>
+            <div class="gaming-tie">
+              这段经历也是我做玩家访谈与社群运营的底气。<span class="en">Player-side insight for community work.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- P6 · 写在最后 -->
+    <section class="leaf" data-page="6">
+      <img class="corner-wash" src="assets/ripple-bloom.png" alt="" style="width:420px; left:50%; top:50%; transform:translate(-50%,-50%); opacity:.35;" />
+      <div class="leaf-pad">
+        <div class="contact-wrap">
+          <h2>写在最后</h2>
+          <span class="en">Say Hi</span>
+          <p class="lines">
+            如果我的小世界让你觉得有趣，欢迎来信 ——<br />
+            <b>yy20021104@126.com</b>
+          </p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:yy20021104@126.com">发邮件 · Email Me</a>
+            <a class="btn btn-ghost" href="resume.html">简历 · Résumé</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- 翻页时的活页动画层 -->
+  <div class="turning" id="turning"></div>
+</div>
+
+<!-- ============ 图标导航 ============ -->
+<nav class="icon-nav" id="iconNav">
+  <a href="#" data-page="0" onclick="goPage(0); return false;">
+    <svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5"/></svg>
+    <span>首页<i>Home</i></span>
+  </a>
+  <a href="#" data-page="2" onclick="goPage(2); return false;">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c1.5-4 4.5-5.5 7.5-5.5s6 1.5 7.5 5.5"/></svg>
+    <span>关于<i>About</i></span>
+  </a>
+  <a href="#" data-page="3" onclick="goPage(3); return false;">
+    <svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="1.5"/><path d="m6 16 4-4.5 3 3 2.5-3 2.5 3"/><circle cx="9" cy="9.5" r="1.2"/></svg>
+    <span>作品<i>Works</i></span>
+  </a>
+  <a href="#" data-page="4" onclick="goPage(4); return false;">
+    <svg viewBox="0 0 24 24"><circle cx="5" cy="19" r="1.8"/><circle cx="19" cy="5" r="1.8"/><path d="M6.5 18c5.5-1 3.5-8 10.5-12" stroke-dasharray="2 2.5"/></svg>
+    <span>经历<i>Journey</i></span>
+  </a>
+  <a href="#" data-page="5" onclick="goPage(5); return false;">
+    <svg viewBox="0 0 24 24"><rect x="2.5" y="8" width="19" height="9" rx="4.5"/><path d="M7.5 10.8v3.4M5.8 12.5h3.4"/><circle cx="15.5" cy="11.5" r=".9"/><circle cx="18" cy="13.5" r=".9"/></svg>
+    <span>游戏<i>Gaming</i></span>
+  </a>
+  <a class="external" href="resume.html">
+    <svg viewBox="0 0 24 24"><path d="M6 3.5h9l3.5 3.5v13.5h-12z"/><path d="M9 12h6M9 15h6M9 9h3"/></svg>
+    <span>简历<i>Résumé</i></span>
+  </a>
+  <a href="#" data-page="6" onclick="goPage(6); return false;">
+    <svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="m4 7 8 6 8-6"/></svg>
+    <span>联系<i>Say Hi</i></span>
+  </a>
+</nav>
+
+<script>
+  const leaves = Array.from(document.querySelectorAll(".leaf"));
+  const turning = document.getElementById("turning");
+  let current = 0;
+  let busy = false;
+
+  function render() {
+    leaves.forEach((l, i) => {
+      l.classList.toggle("active", i === current);
+      l.classList.remove("to-left", "to-right");
+    });
+    document.body.classList.toggle("at-cover", current === 0);
+    document.querySelectorAll("#iconNav a[data-page]").forEach(a => {
+      a.classList.toggle("active", Number(a.dataset.page) === current);
+    });
+  }
+
+  function goPage(n) {
+    if (n === current || busy || n < 0 || n >= leaves.length) return;
+    busy = true;
+    if (document.activeElement && document.activeElement.blur) document.activeElement.blur(); // 防止焦点残留导致连翻
+    const dir = n > current ? 1 : -1;
+    turning.classList.remove("turn-next", "turn-prev");
+    void turning.offsetWidth; // 重置动画
+    turning.classList.add(dir > 0 ? "turn-next" : "turn-prev");
+    leaves[current].classList.add(dir > 0 ? "to-left" : "to-right");
+    setTimeout(() => {
+      current = n;
+      render();
+    }, 320);
+    setTimeout(() => {
+      turning.classList.remove("turn-next", "turn-prev");
+      busy = false;
+    }, 820);
+  }
+  function nextPage() { goPage(current + 1); }
+  function prevPage() { goPage(current - 1); }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.target && /INPUT|TEXTAREA/.test(e.target.tagName)) return;
+    if (e.key === "ArrowRight" || e.key === "PageDown") nextPage();
+    if (e.key === "ArrowLeft" || e.key === "PageUp") prevPage();
+  });
+
+  render();
+</script>
+
+</body>
+</html>
