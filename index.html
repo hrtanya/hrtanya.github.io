@@ -114,7 +114,7 @@
           <span class="head-note">更多装裱中 · More coming</span>
         </div>
         <div class="works-collage">
-          <div class="work-item">
+          <div class="work-item" onclick="openDetail(0)">
             <div class="work-thumb t1">小红书 · 待替换封面</div>
             <div class="work-body">
               <div class="kind">内容运营<span class="en">Content Ops</span></div>
@@ -122,23 +122,23 @@
               <p>账户建立与内容打造全流程，完成冷启动与内容体系搭建。（合肥有始网络）</p>
             </div>
           </div>
-          <div class="work-item">
-            <div class="work-thumb t2">实体书 · 待替换封面</div>
+          <div class="work-item" onclick="openDetail(1)">
+            <div class="work-thumb t2"><img src="assets/work-wenjiang.jpg" alt="实体书《文匠观察笔记》" /></div>
             <div class="work-body">
               <div class="kind">出版 × 美术<span class="en">Publishing</span></div>
               <h3>实体书《文匠观察笔记》</h3>
               <p>选题、组稿、审稿、印刷全流程，负责文创设计与制作。</p>
             </div>
           </div>
-          <div class="work-item">
-            <div class="work-thumb t3">大创项目 · 待替换封面</div>
+          <div class="work-item" onclick="openDetail(2)">
+            <div class="work-thumb t3"><img src="assets/work-dachuang.jpg" alt="大创项目结题证书" /></div>
             <div class="work-body">
               <div class="kind">科研 × 运营<span class="en">Research</span></div>
               <h3>国家级大创「偕她书」</h3>
               <p>核心成员，国家级立项；论文一篇、公众号文章 7 篇、180+ 页访谈录。</p>
             </div>
           </div>
-          <div class="work-item">
+          <div class="work-item" onclick="openDetail(3)">
             <div class="work-thumb t4">电影节 · 待替换封面</div>
             <div class="work-body">
               <div class="kind">运营 · 志愿者<span class="en">UN Volunteer</span></div>
@@ -146,7 +146,7 @@
               <p>以联合国志愿者身份参与线上宣传，负责社交媒体内容运营。</p>
             </div>
           </div>
-          <div class="work-item">
+          <div class="work-item" onclick="openDetail(4)">
             <div class="work-thumb t5">推文设计 · 待替换封面</div>
             <div class="work-body">
               <div class="kind">美术 × 文案<span class="en">Visual &amp; Copy</span></div>
@@ -154,8 +154,8 @@
               <p>公众号推文版面设计、营销文案写作与商品介绍翻译。（佛山槑槑文化）</p>
             </div>
           </div>
-          <div class="work-item">
-            <div class="work-thumb t6">编舟计 · 待替换封面</div>
+          <div class="work-item" onclick="openDetail(5)">
+            <div class="work-thumb t6"><img src="assets/work-bianzhouji.jpg" alt="编舟计公众号" /></div>
             <div class="work-body">
               <div class="kind">编辑 × 内容<span class="en">Editing</span></div>
               <h3>编舟计 · 播客《编辑创造》</h3>
@@ -318,6 +318,19 @@
   </a>
 </nav>
 
+<!-- ============ 作品详情浮层 ============ -->
+<div class="work-detail" id="workDetail">
+  <button class="wd-back" onclick="closeDetail()">‹ 返回 · Back</button>
+  <div class="wd-inner">
+    <div class="wd-kind" id="wdKind"></div>
+    <h2 id="wdTitle"></h2>
+    <div class="wd-en" id="wdEn"></div>
+    <img id="wdImg" src="" alt="" style="display:none" />
+    <div id="wdImgs"></div>
+    <div class="wd-body" id="wdBody"></div>
+  </div>
+</div>
+
 <script>
   const leaves = Array.from(document.querySelectorAll(".leaf"));
   const turning = document.getElementById("turning");
@@ -358,9 +371,43 @@
 
   document.addEventListener("keydown", (e) => {
     if (e.target && /INPUT|TEXTAREA/.test(e.target.tagName)) return;
+    const wd = document.getElementById("workDetail");
+    if (wd.classList.contains("open")) {
+      if (e.key === "Escape") closeDetail();
+      return;
+    }
     if (e.key === "ArrowRight" || e.key === "PageDown") nextPage();
     if (e.key === "ArrowLeft" || e.key === "PageUp") prevPage();
   });
+
+  // ===== 作品详情浮层 =====
+  const workDetails = [
+    { kind: "内容运营 · Content Ops", title: "小红书账号 0 → 1", en: "Xiaohongshu from Scratch", img: null,
+      body: ["账号定位与栏目规划、选题库搭建与内容排期；撰写并制作图文内容，完成账号冷启动，沉淀出一套可复用的内容体系。（合肥有始网络 · 2024 夏）"] },
+    { kind: "出版 × 美术 · Publishing", title: "实体书《文匠观察笔记》", en: "A Book, Made by Hand",
+      images: ["assets/work-wenjiang.jpg", "assets/work-wenjiang-4.jpg", "assets/work-wenjiang-2.jpg", "assets/work-wenjiang-3.jpg"],
+      body: ["负责选题、组稿、约稿、审校、排版与印刷的全流程跟进；设计并制作配套文创（书签、印章等）。从一份选题到一本来得及握在手里的书。"] },
+    { kind: "科研 × 运营 · Research", title: "国家级大创「偕她书」", en: "National Innovation Project", images: ["assets/work-dachuang.jpg"],
+      body: ["国家级大学生创新训练计划项目核心成员；完成论文《我国大众出版领域女性编辑职业现状研究》；运营项目公众号，撰写 7 篇文章，整理 180+ 页访谈录；项目以「良好」等级结题。"] },
+    { kind: "运营 · 志愿者 · UN Volunteer", title: "泛非电影节线上营销", en: "Pan-African Festival Online", img: null,
+      body: ["以联合国志愿者身份参与线上电影节宣传，负责社交媒体内容运营：文案撰写、多语种素材整理与发布排期。（2025 春）"] },
+    { kind: "美术 × 文案 · Visual & Copy", title: "商品推文版图设计", en: "Visual & Copy for E-commerce", img: null,
+      body: ["公众号推文版面设计、营销文案写作与商品介绍翻译。（佛山市槑槑文化传播 · 2022 暑）"] },
+    { kind: "编辑 × 内容 · Editing", title: "编舟计 · 播客《编辑创造》", en: "An Editor's Dream", images: ["assets/work-bianzhouji.jpg"],
+      body: ["南京大学信管学院出版系学生展示平台「编舟计」责任编辑：文稿撰写、整理与审阅；播客《编辑创造》录制与剪辑；参与公众号内容策划（110+ 篇原创内容）。"] }
+  ];
+  function openDetail(i) {
+    const d = workDetails[i]; if (!d) return;
+    document.getElementById("wdKind").textContent = d.kind;
+    document.getElementById("wdTitle").textContent = d.title;
+    document.getElementById("wdEn").textContent = d.en;
+    const imgs = document.getElementById("wdImgs");
+    imgs.innerHTML = (d.images || []).map(s => '<img src="' + s + '" alt="" />').join("");
+    document.getElementById("wdBody").innerHTML = d.body.map(p => "<p>" + p + "</p>").join("");
+    const wd = document.getElementById("workDetail");
+    wd.classList.add("open"); wd.scrollTop = 0;
+  }
+  function closeDetail() { document.getElementById("workDetail").classList.remove("open"); }
 
   render();
 </script>
