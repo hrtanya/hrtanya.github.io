@@ -431,6 +431,7 @@ img { max-width: 100%; display: block; }
 .work-thumb.t4 { background: linear-gradient(135deg, #564d78, #9a8bb8); }
 .work-thumb.t5 { background: linear-gradient(135deg, #8577a5, #cfc6e2); }
 .work-thumb.t6 { background: linear-gradient(135deg, #3f3a55, #7a7095); }
+.work-thumb.t7 { background: linear-gradient(135deg, #46557e, #8b9ac4); }
 .work-body { padding: 4px 4px 0; }
 .work-body .kind { font-size: .64rem; font-weight: 700; color: var(--accent-deep); letter-spacing: .12em; }
 .work-body .kind .en { font-family: var(--serif-en); font-style: italic; font-weight: 400; color: var(--ink-soft); margin-left: 6px; }
@@ -514,6 +515,62 @@ img { max-width: 100%; display: block; }
   padding: 2px 4px;
 }
 .gaming-tie .en { font-family: var(--script); font-style: italic; font-size: .74rem; color: var(--ink-soft); margin-left: 8px; }
+
+/* ---------- P5 游泳板块 ---------- */
+.swim-sec { margin-top: 30px; padding-top: 6px; }
+.swim-head h3 {
+  font-family: var(--hand);
+  font-size: 1.04rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: .05em;
+}
+.swim-head h3 .en {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-size: .78rem;
+  font-weight: 400;
+  color: var(--accent);
+  margin-left: 10px;
+}
+.swim-head p { font-size: .8rem; color: var(--ink-soft); margin-top: 6px; line-height: 1.9; }
+.swim-cover {
+  width: 100%;
+  height: clamp(150px, 24vh, 230px);
+  object-fit: cover;
+  border-radius: 2px;
+  margin: 14px 0 20px;
+  display: block;
+}
+.swim-block { margin-bottom: 22px; }
+.swim-name {
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: .03em;
+  margin-bottom: 10px;
+}
+.swim-name .en {
+  font-family: var(--serif-en);
+  font-style: italic;
+  font-weight: 400;
+  font-size: .72rem;
+  color: var(--ink-soft);
+  margin-left: 10px;
+}
+.swim-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.swim-photos img {
+  width: 100%;
+  height: clamp(130px, 20vh, 190px);
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+}
+.swim-sec + * { margin-top: 20px; }
 
 /* ---------- P6 写在最后 ---------- */
 .contact-wrap {
