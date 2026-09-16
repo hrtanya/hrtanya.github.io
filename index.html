@@ -162,6 +162,14 @@
               <p>责任编辑：文稿撰写、整理与审阅；播客录制与剪辑。</p>
             </div>
           </div>
+          <div class="work-item" onclick="openDetail(6)">
+            <div class="work-thumb t7"><img src="assets/swim-cover.jpg" alt="游泳比赛现场" /></div>
+            <div class="work-body">
+              <div class="kind">运动 · Sport<span class="en">Athlete</span></div>
+              <h3>竞技游泳</h3>
+              <p>国家二级游泳运动员：从省运会到全国大学生游泳锦标赛，泳池是另一个赛场。</p>
+            </div>
+          </div>
         </div>
         <div class="works-note">更多作品持续装裱中，下一步会把真实项目照片贴进相框。<span class="en">More works are being framed; real project photos coming soon.</span></div>
       </div>
@@ -260,7 +268,6 @@
         </div>
       </div>
     </section>
-
     <!-- P6 · 写在最后 -->
     <section class="leaf" data-page="6">
       <img class="corner-wash" src="assets/ripple-bloom.png" alt="" style="width:420px; left:50%; top:50%; transform:translate(-50%,-50%); opacity:.35;" />
@@ -395,7 +402,10 @@
     { kind: "美术 × 文案 · Visual & Copy", title: "商品推文版图设计", en: "Visual & Copy for E-commerce", images: ["assets/work-tuiwen.jpg"],
       body: ["公众号推文版面设计、营销文案写作与商品介绍翻译。（佛山市槑槑文化传播 · 2022 暑）"] },
     { kind: "编辑 × 内容 · Editing", title: "编舟计 · 播客《编辑创造》", en: "An Editor's Dream", images: ["assets/work-bianzhouji.jpg"],
-      body: ["南京大学信管学院出版系学生展示平台「编舟计」责任编辑：文稿撰写、整理与审阅；播客《编辑创造》录制与剪辑；参与公众号内容策划（110+ 篇原创内容）。"] }
+      body: ["南京大学信管学院出版系学生展示平台「编舟计」责任编辑：文稿撰写、整理与审阅；播客《编辑创造》录制与剪辑；参与公众号内容策划（110+ 篇原创内容）。"] },
+    { kind: "运动 · Sport", title: "游泳 · 泳池里的另一个赛场", en: "Swimming", images: ["assets/swim-cover.jpg"],
+      body: ["国家二级游泳运动员。从省运会高校部比赛，到全国大学生锦标赛，再到全国游泳城市系列赛——泳池教会我把长目标拆成每一个 25 米。"],
+      html: '<div class="swim-block"><div class="swim-name">第 24 届中国大学生游泳锦标赛（北方赛区）<span class="en">National University Championships</span></div><div class="swim-photos"><img src="assets/swim-champ.jpg" alt="" /></div></div><div class="swim-block"><div class="swim-name">“四方游泳杯”2026 年第五届全国游泳城市系列赛<span class="en">National Swimming City Series</span></div><div class="swim-photos"><img src="assets/swim-city-1.jpg" alt="" /><img src="assets/swim-city-2.jpg" alt="" /></div></div><div class="swim-block"><div class="swim-name">江苏省第二十一届运动会高校部游泳（甲组）比赛<span class="en">Jiangsu Provincial Games</span></div><div class="swim-photos"><img src="assets/swim-prov-1.jpg" alt="" /><img src="assets/swim-prov-2.jpg" alt="" /></div></div>' }
   ];
   function openDetail(i) {
     const d = workDetails[i]; if (!d) return;
@@ -404,7 +414,7 @@
     document.getElementById("wdEn").textContent = d.en;
     const imgs = document.getElementById("wdImgs");
     imgs.innerHTML = (d.images || []).map(s => '<img src="' + s + '" alt="" />').join("");
-    document.getElementById("wdBody").innerHTML = d.body.map(p => "<p>" + p + "</p>").join("");
+    document.getElementById("wdBody").innerHTML = (d.body || []).map(p => "<p>" + p + "</p>").join("") + (d.html || "");
     const wd = document.getElementById("workDetail");
     wd.classList.add("open"); wd.scrollTop = 0;
   }
