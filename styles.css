@@ -903,3 +903,12 @@ body.at-cover .icon-nav { opacity: 0; pointer-events: none; }
   line-height: 2;
   margin: 0 0 10px;
 }
+
+/* 破浪手账 · 在线试玩链接 */
+.playLink{
+  display:inline-block;margin-top:14px;padding:9px 22px;
+  border:1px solid currentColor;border-radius:999px;
+  font-size:13px;letter-spacing:.12em;text-decoration:none;
+  transition:opacity .25s;
+}
+.playLink:hover{opacity:.65;}

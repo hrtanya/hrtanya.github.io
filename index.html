@@ -115,6 +115,14 @@
         </div>
         <div class="works-collage">
           <div class="work-item" onclick="openDetail(0)">
+            <div class="work-thumb t1"><img src="assets/work-swimgame.jpg" alt="破浪手账 · 游泳主题网页游戏" /></div>
+            <div class="work-body">
+              <div class="kind">游戏 × AI 独立制作<span class="en">Indie Game × AI</span></div>
+              <h3>破浪手账 · Swim Log</h3>
+              <p>以自己泳池生涯为原型的像素养成网页游戏，从入队到领奖台，已上线可玩。</p>
+            </div>
+          </div>
+          <div class="work-item" onclick="openDetail(1)">
             <div class="work-thumb t1"><img src="assets/work-zhantui.jpg" alt="课程作品回顾展海报" /></div>
             <div class="work-body">
               <div class="kind">展览策划<span class="en">Curation</span></div>
@@ -122,7 +130,7 @@
               <p>「我在南大学做书」——《出版物编辑与制作》课程作品回顾展的策划与落地。</p>
             </div>
           </div>
-          <div class="work-item" onclick="openDetail(1)">
+          <div class="work-item" onclick="openDetail(2)">
             <div class="work-thumb t2"><img src="assets/work-wenjiang.jpg" alt="实体书《文匠观察笔记》" /></div>
             <div class="work-body">
               <div class="kind">出版 × 美术<span class="en">Publishing</span></div>
@@ -130,7 +138,7 @@
               <p>选题、组稿、审稿、印刷全流程，负责文创设计与制作。</p>
             </div>
           </div>
-          <div class="work-item" onclick="openDetail(2)">
+          <div class="work-item" onclick="openDetail(3)">
             <div class="work-thumb t3"><img src="assets/work-dachuang.jpg" alt="大创项目结题证书" /></div>
             <div class="work-body">
               <div class="kind">科研 × 运营<span class="en">Research</span></div>
@@ -138,7 +146,7 @@
               <p>核心成员，国家级立项；论文一篇、公众号文章 7 篇、180+ 页访谈录。</p>
             </div>
           </div>
-          <div class="work-item" onclick="openDetail(3)">
+          <div class="work-item" onclick="openDetail(4)">
             <div class="work-thumb t4"><img src="assets/work-un.jpg" alt="联合国志愿者证书" /></div>
             <div class="work-body">
               <div class="kind">运营 · 志愿者<span class="en">UN Volunteer</span></div>
@@ -146,7 +154,7 @@
               <p>以联合国志愿者身份参与线上宣传，负责社交媒体内容运营。</p>
             </div>
           </div>
-          <div class="work-item" onclick="openDetail(4)">
+          <div class="work-item" onclick="openDetail(5)">
             <div class="work-thumb t5"><img src="assets/work-tuiwen.jpg" alt="推文版式设计" /></div>
             <div class="work-body">
               <div class="kind">美术 × 文案<span class="en">Visual &amp; Copy</span></div>
@@ -154,7 +162,7 @@
               <p>公众号推文版面设计、营销文案写作与商品介绍翻译。（佛山槑槑文化）</p>
             </div>
           </div>
-          <div class="work-item" onclick="openDetail(5)">
+          <div class="work-item" onclick="openDetail(6)">
             <div class="work-thumb t6"><img src="assets/work-bianzhouji.jpg" alt="编舟计公众号" /></div>
             <div class="work-body">
               <div class="kind">编辑 × 内容<span class="en">Editing</span></div>
@@ -162,7 +170,7 @@
               <p>责任编辑：文稿撰写、整理与审阅；播客录制与剪辑。</p>
             </div>
           </div>
-          <div class="work-item" onclick="openDetail(6)">
+          <div class="work-item" onclick="openDetail(7)">
             <div class="work-thumb t7"><img src="assets/swim-cover.jpg" alt="游泳比赛现场" /></div>
             <div class="work-body">
               <div class="kind">运动 · Sport<span class="en">Athlete</span></div>
@@ -389,6 +397,10 @@
 
   // ===== 作品详情浮层 =====
   const workDetails = [
+    { kind: "游戏 × AI 独立制作 · Indie Game", title: "破浪手账 Swim Log", en: "A Pixel Swimming Life",
+      images: ["assets/work-swimgame.jpg"],
+      body: ["以本人泳池生涯为原型的像素风养成网页游戏：创建角色、安排训练、走上赛场，结识各地对手与朋友，收集 40 座城市的地标与纪念品，13 种结局等你解锁。纯前端单文件实现，零框架零依赖；策划、像素美术、音效与代码均由本人使用 AI 工具独立完成。"],
+      html: '<a class="playLink" href="https://hrtanya.github.io/cola-pages/swim-log/" target="_blank" rel="noopener">▶ 现在就去玩 · Play Online</a>' },
     { kind: "展览策划 · Curation", title: "我在南大学做书 | 【出版物编辑与制作】课程作品回顾展策划", en: "Book-Making Course Works Exhibition",
       images: ["assets/work-zhantui.jpg"],
       body: ["《出版物编辑与制作》课程作品回顾展「我在南大学做书」策划：展陈规划、展品梳理与视觉呈现，把一学期的做书成果变成一场看得见、走得进的展览。"] },
